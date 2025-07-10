@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  ocm:
+    image: ghcr.io/iamneuro/ocm:latest
+    container_name: ocm
+    restart: unless-stopped
+    platform: linux/arm64
+    volumes:
+      - ./key.pem:/app/key.pem:ro
